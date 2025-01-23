@@ -1,7 +1,9 @@
 :root {
   --clr-purple: #733FCB;
-  --clr-gray-200: #48556A;
-  --clr-gray-800: #19202D;
+  --clr-gray-1: #48556A;
+  --clr-gray-2: #19202D;
+  --clr-bg: #ECF2F8;
+  --clr-white: #fff;
 
   --border-radius: 0.5rem;
 }
@@ -17,10 +19,42 @@ body {
   justify-items: center;
   align-items: center;
   padding: 2rem;
+  min-height: 100svh;
+  background-color: var(--clr-bg);
 }
 
 h2,
 p,
 blockquote {
   margin: 0;
+}
+
+img {
+  display: block;
+  border-radius: 1.75rem;
+}
+
+.reviews > * + * {
+  margin-top: 1.5rem;
+}
+
+.review {
+  padding: 2rem;
+  background-color: var(--review-bg-clr);
+}
+
+.review.purple {
+  --review-bg-clr: var(--clr-purple);
+}
+
+.review.white {
+  --review-bg-clr: var(--clr-white);
+}
+
+.review.gray-1 {
+  --review-bg-clr: var(--clr-gray-1);
+}
+
+.review.gray-2 {
+  --review-bg-clr: var(--clr-gray-2);
 }
