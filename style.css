@@ -1,0 +1,26 @@
+:root {
+  --clr-purple: #733FCB;
+  --clr-gray-200: #48556A;
+  --clr-gray-800: #19202D;
+
+  --border-radius: 0.5rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+h2,
+p,
+blockquote {
+  margin: 0;
+}
