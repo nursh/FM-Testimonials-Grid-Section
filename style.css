@@ -34,8 +34,9 @@ blockquote {
 
 img {
   display: block;
+  width: 1.75rem;
+  height: 1.75rem;
   border-radius: 50%;
-  align-self: flex-start;
 }
 
 .reviews > * + * {
@@ -47,11 +48,15 @@ img {
   background-color: var(--review-bg-clr);
   color: var(--text-color, var(--clr-gray-1));
   box-shadow: 40px 60px 50px -47px rgba(72, 85, 106, 0.25);
+  border-radius: 0.5rem;
 }
 
 .review.purple {
   --review-bg-clr: var(--clr-purple);
   --text-color: var(--clr-off-white);
+  background-image: url('./images/bg-pattern-quotation.svg');
+  background-repeat: no-repeat;
+  background-position-x: 90%;
 }
 
 .review.white {
@@ -83,7 +88,17 @@ blockquote {
 
 .review-heading {
   display: flex;
+  align-items: center;
   gap: 1.06rem;
+}
+
+.review-heading h2 {
+  font-size: 0.8125rem;
+}
+
+.review-heading p {
+  font-size: 0.6875rem;
+  opacity: 0.5;
 }
 
 @media (min-width: 45em) {
@@ -98,12 +113,14 @@ blockquote {
                          "w2 w2 w2";
   }
 
+
   .reviews > * + * {
     margin: 0;
   }
 
   .review.purple {
     grid-area: p1;
+    background-position-x: 80%;
   }
 
   .review.gray-1 {
@@ -123,10 +140,10 @@ blockquote {
   }
 }
 
-@media (min-width: 80em) {
+@media (min-width: 60em) {
 
   .reviews {
-    max-width: 90rem;
+    max-width: 70rem;
     grid-template-columns: repeat(4, 1fr);
 
     grid-template-areas: "p1 p1 g1 w2"
