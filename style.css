@@ -73,6 +73,14 @@ img {
   --text-color: var(--clr-off-white);
 }
 
+.review.purple img {
+  border: 2px solid #AA75F1;
+}
+
+.review.gray-2 img {
+  border: 2px solid #733FC8;
+}
+
 .review > p {
   font-weight: 600;
   font-size: 1.25rem;
