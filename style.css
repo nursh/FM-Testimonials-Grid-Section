@@ -85,3 +85,40 @@ blockquote {
   display: flex;
   gap: 1.06rem;
 }
+
+@media (min-width: 90em) {
+
+  .reviews {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr;
+    gap: 1.8rem;
+
+    grid-template-areas: "p1 p1 g1 w2"
+                         "w1 g2 g2 w2";
+  }
+
+  .reviews > * + * {
+    margin: 0;
+  }
+
+  .review.purple {
+    grid-area: p1;
+  }
+
+  .review.gray-1 {
+    grid-area: g1;
+  }
+
+  .review.gray-2 {
+    grid-area: g2;
+  }
+
+  .review.white.short {
+    grid-area: w1;
+  }
+
+  .review.white.long {
+    grid-area: w2;
+  }
+}
