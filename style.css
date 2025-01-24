@@ -34,7 +34,8 @@ blockquote {
 
 img {
   display: block;
-  border-radius: 1.75rem;
+  border-radius: 50%;
+  align-self: flex-start;
 }
 
 .reviews > * + * {
@@ -45,7 +46,6 @@ img {
   padding: 2rem;
   background-color: var(--review-bg-clr);
   color: var(--text-color, var(--clr-gray-1));
-  min-width: 21rem;
   box-shadow: 40px 60px 50px -47px rgba(72, 85, 106, 0.25);
 }
 
@@ -86,16 +86,16 @@ blockquote {
   gap: 1.06rem;
 }
 
-@media (min-width: 90em) {
+@media (min-width: 45em) {
 
   .reviews {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.8rem;
 
-    grid-template-areas: "p1 p1 g1 w2"
-                         "w1 g2 g2 w2";
+    grid-template-areas: "p1 p1 g1"
+                         "w1 g2 g2"
+                         "w2 w2 w2";
   }
 
   .reviews > * + * {
@@ -120,5 +120,16 @@ blockquote {
 
   .review.white.long {
     grid-area: w2;
+  }
+}
+
+@media (min-width: 80em) {
+
+  .reviews {
+    max-width: 90rem;
+    grid-template-columns: repeat(4, 1fr);
+
+    grid-template-areas: "p1 p1 g1 w2"
+                         "w1 g2 g2 w2";
   }
 }
