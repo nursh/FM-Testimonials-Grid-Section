@@ -26,7 +26,6 @@ body {
   font-weight: 500;
 }
 
-h2,
 p,
 blockquote {
   margin: 0;
@@ -100,11 +99,11 @@ blockquote {
   gap: 1.06rem;
 }
 
-.review-heading h2 {
+.review-author {
   font-size: 0.8125rem;
 }
 
-.review-heading p {
+.review-author-title {
   font-size: 0.6875rem;
   opacity: 0.5;
 }
